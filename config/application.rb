@@ -18,5 +18,8 @@ module Workspace
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # CSRF 対策を無効化する
+    config.action_controller.allow_forgery_protection = false
   end
 end
