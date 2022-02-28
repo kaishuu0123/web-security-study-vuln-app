@@ -1,0 +1,7 @@
+<div class="container">
+  <iframe class="chatForm" src="/chat_form"></iframe>
+  <div class="flex">
+    <iframe class="chatMessages" src="/chat_messages"></iframe>
+    <iframe class="privateChatMessages" src="/private_chat_messages?username=<%= cookies[:username] %>"></iframe>
+  </div>
+</div>

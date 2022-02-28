@@ -1,0 +1,7 @@
+<h3>プライベートメッセージ</h3>
+<hr />
+<% @private_chat_messages.each do |message| %>
+  <%= next if message.from_user.blank? || message.to_user.blank? %>
+  <p><b><%= message.from_user %> から <%= message.to_user %> へ</b></p>
+  <p><%= message.message %></p>
+<% end %>

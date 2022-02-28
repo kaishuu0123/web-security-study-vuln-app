@@ -1,0 +1,5 @@
+<h3>公開メッセージ</h3>
+<% @messages.each do |message| %>
+  <hr />
+  <%= raw(message.username) %>: <%= raw(message.message) %> | <%= message.created_at.in_time_zone('Tokyo') %>
+<% end %>
