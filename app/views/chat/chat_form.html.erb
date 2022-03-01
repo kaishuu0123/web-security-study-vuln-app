@@ -1,15 +1,10 @@
 <p>あなたの名前: <%= cookies[:username] %></p>
-
 <%= form_with url: "/create_message", method: :post, html: { onsubmit: "window.parent.location.reload();" } do |form| %>
   <%= form.hidden_field :username, value: cookies[:username] %>
-  <p>
     <%= form.label :message, "発言:" %>
     <%= form.text_field :message %>
-  </p>
-  <p>
     <%= form.label :to_user, "送信先ユーザ名:" %>
     <%= form.text_field :to_user %>
-    <p>指定するとプライベートメッセージを送れます。空にすると公開チャットに書き込まれます</p>
-  </p>
+    <p>「送信先ユーザ名」を指定するとプライベートメッセージを送れます。空にすると公開チャットに書き込まれます。</p>
   <%= form.submit "発言を書き込む" %>
 <% end %>

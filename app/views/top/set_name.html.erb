@@ -1,5 +1,8 @@
-<%= form_with url: 'set_name', method: :post do |form| %>
-  <%= form.label :username, "Username:" %>
-  <%= form.text_field :username %>
-  <%= form.submit "このユーザ名で Chat に参加する" %>
+<h3 class="topTitle">Web Security Study</h3>
+<%= form_with url: 'set_name', method: :post, html: { class: 'topForm' } do |form| %>
+  <div class="labelGroup">
+    <%= form.label :username, "ユーザ名:" %>
+    <%= form.text_field :username %>
+  </div>
+  <%= form.submit "このユーザ名で Chat に参加する", class: 'topFormButton' %>
 <% end %>
